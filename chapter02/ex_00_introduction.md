@@ -178,4 +178,76 @@ print(texto.rstrip())  # "   hola mundo"
 ### 🔗 [Ver la solución](tiy_02_strings.py)
 
 
-## Integers
+## Numbers
+Los numeros son usados en diferentes ocasiones como puntuaciones de juegos, cálculos matemáticos y tambien se usan para almacenar datos en la web. En Python, existen varios tipos de números y son tratados dependiendo como se usan.
+
+### Integer
+los enteros nos ayudan a realizar operaciones comos:
+- Sumar → `2 + 3`
+- Restar → `5 - 2`
+- Multiplicar → `4 * 3`
+- Dividir → `10 / 2`
+- Potenciar → `2 ** 3` # 2 ^ 3
+
+Python maneja enteros de forma ilimitada, por lo que puedes trabajar con números muy grandes sin preocuparte por errores de desbordamiento.
+
+Además, Python respeta el orden de operaciones matemáticas (también conocido como precedencia de operadores):
+```python
+
+resultado = 2 + 3 * 4
+print(resultado)  # Salida: 14
+
+resultado2 = (2 + 3) * 4
+print(resultado2)  # Salida: 20
+
+```
+
+### Floats
+Un float es cualquier número con punto decimal, como 0.5, 3.14, o 2.0. Este tipo de número "flota" porque el punto decimal puede estar en cualquier lugar del número.
+### Cosas clave que debes saber:
+Puedes sumar, restar, multiplicar floats sin problemas:
+```python
+0.1 + 0.1  →  0.2
+2 * 0.1    →  0.2
+```
+A veces los resultados no son exactos, debido a cómo la computadora representa los decimales internamente:
+```python
+0.2 + 0.1  →  0.30000000000000004
+3 * 0.1    →  0.30000000000000004
+```
+### ¿Qué hacer con los decimales extra?
+No te preocupes. Este comportamiento es *normal en todos los lenguajes de programación.* Más adelante, aprenderás técnicas para redondear o formatear estos resultados si es necesario.
+
+### Evitar errores de tipo con str()
+Cuando mezclas texto (strings) y números (int) en un mensaje, Python necesita que todos sean del mismo tipo para poder combinarlos.
+
+*Problema común:*
+
+```python
+age = 23
+mensaje = "Feliz cumpleaños número " + age + "!"
+# ❌ TypeError: no se puede concatenar str e int
+```
+Python lanza un TypeError, porque no puede juntar directamente un número con texto.
+
+*Solución:*
+Convierte el número a texto usando `str()`:
+```python
+age = 23
+mensaje = "Feliz cumpleaños número " + str(age) + "!"
+print(mensaje)  
+# Salida: Feliz cumpleaños número 23!
+```
+
+### División en Python 2
+En Python 2, dividir enteros como 3 / 2 da 1, no 1.5, porque trunca el decimal.
+
+Para obtener un resultado decimal, al menos uno de los números debe ser float:
+```python
+3 / 2.0  →  1.5
+3.0 / 2  →  1.5
+```
+Este comportamiento no ocurre en Python 3, donde 3 / 2 `ya da 1.5.`
+
+### Ejercicios de Numbers `Try It Yourself`
+### 🔗 [Ver la solución](tiy_03_numbers.py)
