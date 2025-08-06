@@ -251,3 +251,22 @@ Este comportamiento no ocurre en Python 3, donde 3 / 2 `ya da 1.5.`
 
 ### Ejercicios de Numbers `Try It Yourself`
 ### 🔗 [Ver la solución](tiy_03_numbers.py)
+
+## Comentarios
+Los comentarios son anotaciones en el código que no afectan su ejecución. Son útiles para explicar partes del código, hacer notas o recordar cosas importantes. En Python, los comentarios se inician con el símbolo `#`. Todo lo que esté después de este símbolo en esa línea será ignorado por el intérprete de Python.
+### Ejemplos de Comentarios
+```python
+# Este es un comentario de una sola línea
+print("Hola, mundo!")  # Este comentario explica qué hace la línea
+# Comentario de varias líneas
+"""
+Este es un comentario de varias líneas.
+Puedes usarlo para explicar conceptos complejos o dejar notas importantes.
+"""
+```
+## The Zen of Python
+El Zen de Python es una colección de principios que guían el diseño y la filosofía del lenguaje. Puedes acceder a él ejecutando `import this` en tu consola de Python. Aquí hay algunos de sus principios más destacados:
+
+- **simple es mejor que complejo**: La simplicidad es preferible a la complejidad.
+- **complejo es mejor que lo complicado**: se prefiere un diseño complejo (si es necesario) pero claro, antes que uno enredado y difícil de mantener.
+- **La belleza es preferible a la fealdad**: El código debe ser estéticamente agradable.
