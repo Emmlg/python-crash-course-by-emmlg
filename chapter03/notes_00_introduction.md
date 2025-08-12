@@ -152,7 +152,133 @@ print(too_expensive)        # ducati
 ### Ejercicios de  `Try It Yourself`
 ### 🔗 [Ver la solución](/chapter03/tiy_02_changing_adding_removing.py)
 
-# Organizing a List
+---
+# 📂 Organizando una lista
+Muchas veces no tenemos control sobre el orden en que llegan los datos, por lo que debemos **organizar listas** para facilitar su uso.
+En Python, podemos ordenarlas **de forma permanente o temporal**, en **orden ascendente o descendente**.
+
+
+
+## 🔹 1. Ordenar una lista de forma permanente con `sort()`
+
+El método `sort()` organiza los elementos de una lista **en orden ascendente** y modifica la lista original.
+
+**Ejemplo:**
+
+```
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.sort()
+print(cars)
+```
+
+**Salida:**
+
+```
+['audi', 'bmw', 'subaru', 'toyota']
+```
+
+### 🔄 Orden descendente con `reverse=True`
+
+```
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.sort(reverse=True)
+print(cars)
+```
+
+**Salida:**
+
+```
+['toyota', 'subaru', 'bmw', 'audi']
+```
+
+> 💡 **Nota:** `sort()` cambia el orden de forma definitiva. Si necesitas mantener el original, usa `sorted()`.
+
+
+
+## 🔹 2. Ordenar una lista temporalmente con `sorted()`
+
+Si solo quieres **ver la lista ordenada** sin modificarla permanentemente, usa `sorted()`.
+
+**Ejemplo:**
+
+```
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(sorted(cars))  # Orden temporal
+print(cars)          # Lista original sin cambios
+```
+
+**Salida:**
+
+```
+['audi', 'bmw', 'subaru', 'toyota']
+['bmw', 'audi', 'toyota', 'subaru']
+```
+
+---
+
+## 🔹 3. Invertir el orden de una lista con `reverse()`
+
+El método `reverse()` invierte el orden actual de los elementos.
+
+**Ejemplo:**
+
+```
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.reverse()
+print(cars)
+```
+
+**Salida:**
+
+```
+['subaru', 'toyota', 'audi', 'bmw']
+```
+
+Para volver al orden anterior:
+
+```
+cars.reverse()
+print(cars)
+```
+
+**Salida:**
+
+```
+['bmw', 'audi', 'toyota', 'subaru']
+```
+
+> ⚠ **Ojo:** `reverse()` no ordena, solo invierte el orden actual.
+
+---
+
+## 🔹 4. Contar elementos de una lista con `len()`
+
+La función `len()` devuelve el número de elementos de la lista (empezando a contar desde 1).
+
+**Ejemplo:**
+
+```
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(len(cars))
+```
+
+**Salida:**
+
+```
+4
+```
+
+## 📌 Resumen rápido
+
+| Método / Función     | Efecto                                | Modifica la lista original |
+| -------------------- | ------------------------------------- | -------------------------- |
+| `sort()`             | Ordena permanentemente                | ✅                          |
+| `sort(reverse=True)` | Ordena permanentemente en descendente | ✅                          |
+| `sorted()`           | Ordena temporalmente                  | ❌                          |
+| `reverse()`          | Invierte el orden actual              | ✅                          |
+| `len()`              | Cuenta elementos                      | ❌                          |
+
+---
 
 ### Ejercicios de  `Try It Yourself`
 ### 🔗 [Ver la solución](tiy_)
