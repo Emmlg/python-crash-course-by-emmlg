@@ -281,10 +281,107 @@ print(len(cars))
 ---
 
 ### Ejercicios de  `Try It Yourself`
-### 🔗 [Ver la solución](tiy_)
+### 🔗 [Ver la solución](/chapter03/tiy_03_organazing_list.py)
 
 
-# Avoiding Index Errors When Working with Lists
+# ❗️ Evitando errores de índice al trabajar con listas
+Cuando trabajas con listas en Python, un error muy común es el **IndexError**, que ocurre cuando intentas acceder a un índice que no existe en la lista.
+
+## 🔹 Ejemplo de un IndexError
+
+Si tienes una lista con tres elementos y solicitas el cuarto:
+
+```
+motorcycles = ['honda', 'yamaha', 'suzuki']
+print(motorcycles[3])
+```
+
+**Resultado:**
+
+```
+Traceback (most recent call last):
+  File "motorcycles.py", line 3, in <module>
+    print(motorcycles[3])
+IndexError: list index out of range
+```
+
+
+## 📌 ¿Por qué pasa esto?
+
+* Python **indexa desde 0**, no desde 1.
+
+  * El **primer elemento** → índice `0`
+  * El **segundo elemento** → índice `1`
+  * El **tercer elemento** → índice `2`
+
+* En el ejemplo, como la lista tiene **índices 0, 1 y 2**, pedir el índice `3` provoca un error.
+
+## 💡 Cómo evitarlo
+
+1. **Asegúrate de que el índice exista** usando `len(lista)` para ver la cantidad de elementos.
+2. **Recuerda el inicio en 0**: el último índice siempre es `len(lista) - 1`.
+3. **Usa índices negativos** para acceder desde el final.
+
+---
+
+## 🔹 Accediendo al último elemento con `-1`
+
+```
+motorcycles = ['honda', 'yamaha', 'suzuki']
+print(motorcycles[-1])
+```
+
+**Salida:**
+
+```
+suzuki
+```
+
+Esto siempre devuelve el último elemento **mientras la lista no esté vacía**.
+
+
+## ⚠ Caso especial: lista vacía
+
+Si intentas acceder al último elemento de una lista vacía:
+
+```
+motorcycles = []
+print(motorcycles[-1])
+```
+
+**Resultado:**
+
+```
+Traceback (most recent call last):
+  File "motorcycles.py", line 3, in <module>
+    print(motorcycles[-1])
+IndexError: list index out of range
+```
+
+---
+
+## 📋 Consejo de depuración
+
+> 🛠 Si obtienes un IndexError y no sabes por qué:
+>
+> 1. Imprime la lista con `print(lista)`.
+> 2. Verifica su longitud con `print(len(lista))`.
+>
+> Esto ayuda a confirmar si la lista tiene los elementos que creías.
+
+---
+
+## 📌 Resumen rápido
+
+| Acción                     | Código           | Resultado esperado |
+| -------------------------- | ---------------- | ------------------ |
+| Acceder al primer elemento | `lista[0]`       | Primer ítem        |
+| Acceder al último elemento | `lista[-1]`      | Último ítem        |
+| Último índice válido       | `len(lista) - 1` | Entero             |
+| Lista vacía con `-1`       | `[][-1]`         | IndexError         |
+
+---
+
 
 ### Ejercicios de  `Try It Yourself`
 ### 🔗 [Ver la solución](tiy_)
